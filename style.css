@@ -44,3 +44,87 @@ button:active {
     fill: #175282;
 }
 
+.sad .mouth {
+    transform: scale(0.6) rotate(180deg);
+    transform-origin: 340px 395px;
+}
+
+.svg-container {
+    perspective: 1200px;
+}
+
+.move {
+    animation: move 6s infinite;
+}
+
+.move .inner-eye-group {
+    animation: moveEyes 8s infinite;
+}
+
+.move .left-whiskers {
+    animation: leftWhiskers 4s infinite;
+    transform-origin: 325px 350px;
+}
+
+.move .right-whiskers {
+    animation: rightWhiskers 4s infinite;
+    transform-origin: 325px 350px;
+}
+
+@keyframes move {
+
+    20% {
+        transform: rotateY(10deg) rotateX(10deg);
+    }
+
+    40% {
+        transform: rotateY(30deg) rotateX(20deg);
+    }
+
+    60% {
+        transform: rotateY(-10deg) rotateX(-10deg);
+    }
+
+    80% {
+        transform: rotateY(-20deg) rotateX(-20deg);
+    }
+}
+
+@keyframes moveEyes {
+
+    30% {
+        transform: translate(-18px, -20px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    70% {
+        transform: translate(16px, -20px);
+    }
+}
+
+@keyframes leftWhiskers {
+
+    20% {
+        transform: rotate(5deg);
+    }
+
+    60% {
+        transform: rotate(-5deg);
+    }
+
+}
+
+@keyframes rightWhiskers {
+
+    10% {
+        transform: rotate(-2deg);
+    }
+
+    90% {
+        transform: rotate(7deg);
+    }
+
+}
